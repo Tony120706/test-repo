@@ -39,6 +39,34 @@ class BinarySearchTree:
             self._right = BinarySearchTree(None)
 
 
+class _Node:
+    """
+    A node of the linked list
+    """
+    item:Any
+    next:Optional[_Node]
+
+    def __init__(self, item: Any) -> None:
+        """
+        Initialize a node
+        """
+        self.item = item
+        self.next = None
+
+
+class LinkedList:
+    """
+    A linked list
+    """
+    _first:Optional[_Node]
+
+    def __init__(self) -> None:
+        """
+        Initialize an empty linked list
+        """
+        self._first = None
+
+
 def bfs(t: Tree) -> list[Tree]:
     """
     return a list of nodes in the tree
